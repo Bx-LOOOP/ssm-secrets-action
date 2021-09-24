@@ -48,6 +48,7 @@ jobs:
         run: npm run test
 
       - name: Run Build
+        if: ${{ github.event_name == 'push' }}
         run: npm run build
 
       # Release package if we are pushing (merge to master)
