@@ -1,6 +1,6 @@
 {
   "name": "@bx-looop/ssm-secrets-action",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Github Action to retrieve secrets from SSM",
   "author": "Bx",
   "license": "UNLICENSED",
