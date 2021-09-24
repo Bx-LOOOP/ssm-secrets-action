@@ -10,7 +10,6 @@ inputs:
   parameters:
     description: "Parameter names to fetch"
     required: true
-outputs:
 runs:
   using: "node12"
   main: "dist/index.js"
