@@ -40,7 +40,7 @@ export const run = async () => {
     Object.keys(secret).forEach((secretKey) => {
       const secretValue = secret[secretKey];
       core.setSecret(secretValue);
-      core.exportVariable(`${envVarPrefix}_${formatEnvironmentVariable(secretKey)}`, secret);
+      core.exportVariable(`${envVarPrefix}_${formatEnvironmentVariable(secretKey)}`, secretValue);
     });
   });
 
