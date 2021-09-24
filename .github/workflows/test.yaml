@@ -1,0 +1,20 @@
+name: Test
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Get SSM Params
+        uses: bx-looop/ssm-secrets-action
+        with:
+          aws-access-key-id: ${{ secrets.SECRETS_ACCESS_KEY_ID }}
+          aws-secret-key: ${{ secrets.SECRETS_SECRET_KEY }}
+          parameters: /secrets/apps/sentry-auth,/secrets/apps/grow-bx-earth/prismic
+      
+      - name: View Environment
+        run: env
