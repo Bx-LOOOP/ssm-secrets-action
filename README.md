@@ -9,12 +9,13 @@ Github Action to retrieve secrets from AWS SSM Parameters and make them availabl
 None
 
 ## Example usage
-
-uses: bx-looop/ssm-secrets@v1.0.0
+```
+uses: bx-looop/ssm-secrets@v1.0.3
 with:
   aws-access-key-id: {{secrets.SECRETS_ACCESS_KEY_ID}}
   aws-secret-key: {{secrets.SECRETS_SECRET_KEY}}
   parameters: /secrets/apps/sentry-auth,/secrets/apps/grow-bx-earth/prismic
+```
 
 The SSM Parameter are expected to hold JSON strings. These will be parsed and each key output as a environment variable.
 
