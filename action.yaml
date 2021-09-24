@@ -1,0 +1,16 @@
+name: "SSM Parameter Action"
+description: "Retrieve Parameters from SSM"
+inputs:
+  aws-access-key-id:
+    description: "AWS_ACCESS_KEY_ID with permission to read SSM Parameters"
+    required: true
+  aws-secret-key:
+    description: "AWS_SECRET_KEY"
+    required: true
+  parameters:
+    description: "Parameter names to fetch"
+    required: true
+outputs:
+runs:
+  using: "node12"
+  main: "dist/index.js"

@@ -1,0 +1,5 @@
+import core from "@actions/core";
+
+import { run } from "./action";
+
+run().catch((error) => core.setFailed(`Workflow failed! ${error.message}`));
